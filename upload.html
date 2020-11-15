@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<body>
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-storage.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+      <script src="contact.js"></script>
+     
+
+            <div class="about-hero">
+                  <div class="container content">
+                     <h1>Photographer uploads an image here</h1>
+                        <form>
+                              <div class="form-group">
+                                    <label>Customer-ID</label><br>
+                                    <input type="text" id="client-name"/>
+                                    <!--<p id="client" style="color: rgb(102, 101, 101);">Client Name</p>-->
+                                    <br><br><br>
+                              </div>
+
+                              
+                        </form>
+                        <br><br>                           
+                        <!--<input type="file" id="files" name="files[]" onchange="uploadFile()" multiple /> -->
+                        <input type="file" id="files" name="files[]" multiple />    
+                        <button onclick="uploadFile()">Upload Image</button>
+                        <h2>an alert message will appear on successful upload of the image</h2>
+                        <!--<button onclick="uploadFile()">Upload a file</button>-->
+
+                  </div>
+            </div>
+
+          
+</body>
+</html>

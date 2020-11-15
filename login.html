@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function click() {
+    inputname = document.getElementById("name");
+    inputpassword = document.getElementById("pass");
+    console.log(inputname, inputpassword);
+    sessionStorage.setItem("AuthenticationState", "Authenticated");
+                
+    //This authentication key will expire in 1 hour.
+    sessionStorage.setItem("AuthenticationExpires", Date.now.addHours(1));
+    
+    //Push the user over to the next page.
+    window.location.href = "welcome.html";
+}
+
+        </script>
+       
+        <input type="text" id="name" name="name" />
+        <input type="text" id="pass" name="pass" />
+        <button onclick="click()">Go HOME</button>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  color: white;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: #888888;
+}
+
+.right {
+  right: 0;
+  background-color:#2897;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+</style>
+</head>
+<body>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+<script src="sign_log.js"></script>
+<div class="split right">
+  <div class="centered">
+    <h1>LOGIN</h1>
+    Name:
+    <input type="text" id="lo-name" name="si-name"/><br><br><br>
+    Customer-id:
+   <input type="text" id="lo-id" name="em-name"/>
+   <br><br>
+   <button onclick="login()">Login</button>
+</div>
+</div>
+
+<div class="split left">
+  <div class="centered">
+      <h1>SIGN-UP</h1>
+      Name:
+    <input type="text" id="si-name" name="si-name"/><br><br><br>
+    Email:
+    <input type="email" id="si-email" name="em-name"/>
+    <br><br>
+    <button onclick="signup()">Sign up</button>
+    <p>On successful sign-up, a customer ID will appear as an alert message, use it for further reference</p>
+    <p>This is just for testing, the user will be notified by email in the final version</p>
+  </div>
+</div>
+     
+</body>
+</html> 
